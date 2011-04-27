@@ -8,7 +8,7 @@
 
 
 #include <stdio.h>
-#include "libpq-fe.h"
+#include "libpq-fe.h"  /* internal include PG */
 
 void exit_nicely(PGconn* conn) 
 { 
