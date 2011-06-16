@@ -48,21 +48,23 @@ int main(int argc, char* argv)
 	// PGconn *PQconnectdb(const char *conninfo);
 	// PGconn *PQconnectdbParams(const char **keywords, const char **values, int expand_dbname);
 
-	char **conKeyParam;
-	char **conKeyValues;
+	char *conKeyParam[] = {"host","port","dbname","user",NULL};
+	char *conKeyValues[] = {"localhost","5432","template1","postgresql",NULL};
 
-	conKeyParam[0]="host";
+	/*conKeyParam[0]="host";
 	conKeyParam[1]="hostaddr";
 	conKeyParam[2]="port";
 	conKeyParam[3]="dbname";
 	conKeyParam[4]="user";
+	conKeyParam[5]="\0";
 
 	conKeyValues[0]="localhost";
 	conKeyValues[1]="127.0.0.1";
 	conKeyValues[2]="5432";
 	conKeyValues[3]="template1";
 	conKeyValues[4]="postgresql";
-
+	conKeyValues[5]="\0";
+	*/
 	
 	conn = PQconnectdbParams(conKeyParam,conKeyValues,0);
 
