@@ -40,8 +40,33 @@ int main(int argc, char* argv)
 	/* debugging tty for the backend server */ 
 	dbName = "template1";
 
+	// http://developer.postgresql.org/pgdocs/postgres/libpq-connect.html
+
 	/* make a connection to the database */ 
-	conn = PQsetdb(pghost, pgport, pgoptions, pgtty, dbName);
+	//conn = PQsetdb(pghost, pgport, pgoptions, pgtty, dbName); // trying to connect with PGconnectdb
+
+	// PGconn *PQconnectdb(const char *conninfo);
+	// PGconn *PQconnectdbParams(const char **keywords, const char **values, int expand_dbname);
+
+	char **conKeyParam;
+	char **conKeyValues;
+
+	conKeyParam[0]="host";
+	conKeyParam[1]="hostaddr";
+	conKeyParam[2]="port";
+	conKeyParam[3]="dbname";
+	conKeyParam[4]="user";
+	conKeyParam[5]="password";
+
+	conKeyValues[0]="localhost";
+	conKeyValues[1]="127.0.0.1";
+	conKeyValues[2]="5432";
+	conKeyValues[3]="template1";
+	conKeyValues[4]="postgresql";
+	conKeyValues[5]= NULL;
+
+	
+	conn = PQconnectdbParams(conKeyParam,conKeyValues,0);
 
 	/* check to see that the backend connection was successfully made */ 
 	if (PQstatus(conn) == CONNECTION_BAD) 
