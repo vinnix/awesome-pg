@@ -56,14 +56,12 @@ int main(int argc, char* argv)
 	conKeyParam[2]="port";
 	conKeyParam[3]="dbname";
 	conKeyParam[4]="user";
-	conKeyParam[5]="password";
 
 	conKeyValues[0]="localhost";
 	conKeyValues[1]="127.0.0.1";
 	conKeyValues[2]="5432";
 	conKeyValues[3]="template1";
 	conKeyValues[4]="postgresql";
-	conKeyValues[5]= NULL;
 
 	
 	conn = PQconnectdbParams(conKeyParam,conKeyValues,0);
