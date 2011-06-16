@@ -46,7 +46,7 @@ int main(int argc, char* argv)
 	/* check to see that the backend connection was successfully made */ 
 	if (PQstatus(conn) == CONNECTION_BAD) 
 	{ 
-		fprintf(stderr, "Connection to database '%s' failed.0", dbName); 
+		fprintf(stderr, "Connection to database '%s' failed.0\n", dbName); 
 		fprintf(stderr,"%s",PQerrorMessage(conn)); 
 		exit_nicely(conn); 
 

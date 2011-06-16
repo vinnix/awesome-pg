@@ -2,10 +2,15 @@
 ## 
 ## 	Regras para criar uma aplicacao libpq de exemplo
 
-CPPFLAGS += -I/usr/include/postgresql
+CPPFLAGS += -I/usr/local/pgsql/include
 CFLAGS	 += -g
 LDFLAGS	 += -g
 LDFLAGS	 += -g
-LDLIBS 	 += -L/usr/lib -lpq 
+LDLIBS 	 += -L/usr/local/pgsql/lib -lpq 
 
-testlibpq: testlibpq.o
+all: testlibpq
+
+testlibpq:  testlibpq.o
+
+clean: 
+	rm *.o testlibpq
