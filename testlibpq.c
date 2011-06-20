@@ -8,6 +8,7 @@
 
 
 #include <stdio.h>
+#include <string.h>
 #include "libpq-fe.h"  /* internal include PG */
 
 void exit_nicely(PGconn* conn) 
@@ -49,6 +50,16 @@ int main(int argc, char* argv)
 
 	char *conKeyParam[] = {"host","port","dbname","user",NULL};
 	char *conKeyValues[] = {"localhost","5432","template1","postgresql",NULL};
+
+	/*
+	char **conKey;
+
+	&conKey = memset(*conKey,0x00, sizeof("host");
+	strcpy(connKey,"host");
+	&conKey = memset(*conKey,0x00, sizeof("port");
+	strcpy(connKey,"port");
+
+	*/
 
 	/*conKeyParam[0]="host";
 	conKeyParam[1]="hostaddr";
