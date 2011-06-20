@@ -44,7 +44,6 @@ int main(int argc, char* argv)
 
 	/* make a connection to the database */ 
 	//conn = PQsetdb(pghost, pgport, pgoptions, pgtty, dbName); // trying to connect with PGconnectdb
-
 	// PGconn *PQconnectdb(const char *conninfo);
 	// PGconn *PQconnectdbParams(const char **keywords, const char **values, int expand_dbname);
 
@@ -83,7 +82,7 @@ int main(int argc, char* argv)
 	res = PQexec(conn,"BEGIN"); 
 	if (PQresultStatus(res) != PGRES_COMMAND_OK) 
 	{ 
-		fprintf(stderr,"BEGIN command failed0"); 
+		fprintf(stderr,"BEGIN command failed\n"); 
 		PQclear(res); exit_nicely(conn); 
 	} /* should PQclear PGresult whenever it is no longer needed to avoid memory leaks */ 
 	PQclear(res);
@@ -92,7 +91,7 @@ int main(int argc, char* argv)
 	res = PQexec(conn,"DECLARE myportal CURSOR FOR select * from pg_database"); 
 	if (PQresultStatus(res) != PGRES_COMMAND_OK) 
 	{ 
-		fprintf(stderr,"DECLARE CURSOR command failed0"); 
+		fprintf(stderr,"DECLARE CURSOR command failed\n"); 
 		PQclear(res); 
 		exit_nicely(conn); 
 	} 
@@ -101,10 +100,12 @@ int main(int argc, char* argv)
 	res = PQexec(conn,"FETCH ALL in myportal"); 
 	if (PQresultStatus(res) != PGRES_TUPLES_OK) 
 	{ 
-		fprintf(stderr,"FETCH ALL command didn't return tuples properly"); 
+		fprintf(stderr,"FETCH ALL command didn't return tuples properly\n"); 
 		PQclear(res); 
 		exit_nicely(conn); 
 	}
+
+	/* Show all fields and values */	
 
 	/* first, print out the attribute names */ 
 	nFields = PQnfields(res); 
@@ -112,7 +113,7 @@ int main(int argc, char* argv)
 	{ 
 		printf("%-15s",PQfname(res,i)); 
 	} 
-	printf("|");
+	printf("|\n");
 
 	/* next, print out the instances */ 
 	for (i=0; i < PQntuples(res); i++) 
@@ -121,7 +122,7 @@ int main(int argc, char* argv)
 		{ 
 			printf("%-15s", PQgetvalue(res,i,j)); 
 		} 
-		printf("|"); 
+		printf("|\n"); 
 	}
 
 	PQclear(res);
