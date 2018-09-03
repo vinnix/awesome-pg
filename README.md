@@ -12,7 +12,7 @@
 
 * [devton](https://github.com/devton/awesome-postgresql) - small list, mention some blogs;
 
-* [dhamaniasad](https://github.com/dhamaniasad/awesome-postgres) - large one, with different material as well and language bindings;
+* [dhamaniasad](https://github.com/dhamaniasad/awesome-postgres) - large one, with different material as well and language bindings; <This might be the winer so far>
 
 
 ## TODO: What I am doing here is:
@@ -20,3 +20,11 @@
 * Compilling different resources in one list;
 * Separating then in files;
 * Another ideas that are in my head; 
+
+
+## Search results:
+
+* [2018-09-03](https://github.com/search?q=awesome-postgres) - 18 results
+* [2018-09-03](https://github.com/search?q=%22awesome-postgresql%22&type=Repositories) - 8 results
+* [2018-09-03](https://github.com/search?q=%22awesome-pg%22&type=Repositories) - 3 results
+
