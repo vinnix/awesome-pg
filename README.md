@@ -29,3 +29,17 @@ Stop with it, and go code something! :P
 * [2018-09-03](https://github.com/search?q=%22awesome-postgresql%22&type=Repositories) - 8 results
 * [2018-09-03](https://github.com/search?q=%22awesome-pg%22&type=Repositories) - 3 results
 
+
+## Archeology: Some gists from the past:
+
+* [2013-10-30 :: Makefile](https://gist.github.com/vinnix/8d71b278e5795282f6dd) Makefile
+* [2013-10-30 :: myLilLibrary.c](https://gist.github.com/vinnix/7235246) PostgreSQL C function
+* [2013-10-30 :: CREATE FUNCTION](https://gist.github.com/vinnix/6f54a694786642e96c07) Making C function available inside the database
+
+* [2013-09-17 :: Testing PostgresXC](https://gist.github.com/vinnix/ff737e494e199db5a2f8)
+* [2010-11-12 :: PL/pgSQL skeleton](https://gist.github.com/vinnix/257f544bf1380ef546ed)
+* [2010-11-08 :: Monitoring Slony-I](https://gist.github.com/vinnix/5809e69b173f8e071920)
+* [2010-10-26 :: Monitoring Slony-I](https://gist.github.com/vinnix/1beca118d09320871816)
+* [2010-10-24 :: Vacuuming Slony-I log tables](https://gist.github.com/vinnix/87b698d89ee2d1c81b54)
+
+
