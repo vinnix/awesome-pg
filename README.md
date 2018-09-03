@@ -1,5 +1,5 @@
-# awesome-pg
-PostgreSQL "Awesome" Lists of Projects, Articles, etc.. [![awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)]
+# awesome-pg 
+![awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg) PostgreSQL "Awesome" Lists of Projects, Articles, etc.. 
 
 "Ohh no! He is creating another of those "Awesome" lists! Stop with it, and code something! :P
 
@@ -12,7 +12,7 @@ PostgreSQL "Awesome" Lists of Projects, Articles, etc.. [![awesome](https://cdn.
 
 * [devton](https://github.com/devton/awesome-postgresql) - small list, mention some blogs;
 
-* [dhamaniasad](https://github.com/dhamaniasad/awesome-postgres) - large one, with different material as well;
+* [dhamaniasad](https://github.com/dhamaniasad/awesome-postgres) - large one, with different material as well and language bindings;
 
 
 ## TODO: What I am doing here is:
