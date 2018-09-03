@@ -1,19 +1,16 @@
 # awesome-pg 
 ![awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg) PostgreSQL "Awesome" Lists of Projects, Articles, etc.. 
 
-"Ohh no! He is creating another of those "Awesome" lists! Stop with it, and code something! :P
+'Ohh no! He is creating another of those "Awesome" lists!' 
+Stop with it, and go code something! :P
 
 
 ## Some cool lists that I found so far:
 
 * [maahl](https://github.com/maahl/awesome-postgres-resources) - more articles;
-
 * [edib](https://github.com/edib/awesome-postgres) - many different stuff (misc);
-
 * [devton](https://github.com/devton/awesome-postgresql) - small list, mention some blogs;
-
 * [dhamaniasad](https://github.com/dhamaniasad/awesome-postgres) - large one, with different material as well and language bindings; <This might be the winer so far>
-
 * [kevmo](https://github.com/kevmo/awesome-postgres) - one item with material about FTS
 
 
