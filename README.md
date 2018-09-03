@@ -1,2 +1,22 @@
 # awesome-pg
-PostgreSQL "Awesome" Lists of Projects, Articles, etc.. 
+PostgreSQL "Awesome" Lists of Projects, Articles, etc.. [![awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)]
+
+"Ohh no! He is creating another of those "Awesome" lists! Stop with it, and code something! :P
+
+
+## Some cool lists that I found so far:
+
+* [maahl](https://github.com/maahl/awesome-postgres-resources) - more articles;
+
+* [edib](https://github.com/edib/awesome-postgres) - many different stuff (misc);
+
+* [devton](https://github.com/devton/awesome-postgresql) - small list, mention some blogs;
+
+* [dhamaniasad](https://github.com/dhamaniasad/awesome-postgres) - large one, with different material as well;
+
+
+## TODO: What I am doing here is:
+
+* Compilling different resources in one list;
+* Separating then in files;
+* Another ideas that are in my head; 
