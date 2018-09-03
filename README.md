@@ -14,6 +14,8 @@
 
 * [dhamaniasad](https://github.com/dhamaniasad/awesome-postgres) - large one, with different material as well and language bindings; <This might be the winer so far>
 
+* [kevmo](https://github.com/kevmo/awesome-postgres) - one item with material about FTS
+
 
 ## TODO: What I am doing here is:
 
