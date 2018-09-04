@@ -15,6 +15,7 @@ Stop with it, and go code something! :P
 * [dhamaniasad](https://github.com/dhamaniasad/awesome-postgres) - large one, with different material as well and language bindings; <This might be the winer so far>
 * [kevmo](https://github.com/kevmo/awesome-postgres) - one item with material about FTS
 * [w-e-ll](https://github.com/w-e-ll/awesome-postgresql) - more lists of good stuff;
+* [sumonsun](https://gitlab.com/sumonsun/awesome-postgres) - another one, from gitlab now :) 
 
 
 ## TODO: What I am doing here is: :elephant:
