@@ -14,11 +14,12 @@ Stop with it, and go code something! :P
 * [devton](https://github.com/devton/awesome-postgresql) - small list, mention some blogs;
 * [dhamaniasad](https://github.com/dhamaniasad/awesome-postgres) - large one, with different material as well and language bindings; <This might be the winer so far>
 * [kevmo](https://github.com/kevmo/awesome-postgres) - one item with material about FTS
+* [w-e-ll](https://github.com/w-e-ll/awesome-postgresql) - more lists of good stuff;
 
 
 ## TODO: What I am doing here is: :elephant:
 
-* Compilling different resources in one list;
+* Compilling different resources in one list (dedup);
 * Separating then in files;
 * Another ideas that are in my head; 
 
