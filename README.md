@@ -23,6 +23,20 @@ Stop with it, and go code something! :P
 * Another ideas that are in my head; 
 
 
+## Other Useful projects:
+
+* [pg_quota](https://github.com/hlinnaka/pg_quota) Objects diskspace
+* 
+
+
+## plv8:
+
+* [official](https://pgxn.org/dist/plv8/doc/plv8.html) plv8 official page
+* [upgrade procedure](https://pgxn.org/dist/plv8/doc/plv8.html#Update.procedure) how to upgrade plv8
+* [using modules](https://rymc.io/2016/03/22/a-deep-dive-into-plv8/) plv8 / modules / shuffle 
+* 
+
+
 ## Search results:
 
 * [2018-09-03](https://github.com/search?q=awesome-postgres) - 18 results
