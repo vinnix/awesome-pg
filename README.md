@@ -9,6 +9,7 @@ Stop with it, and go code something! :P
 
 ## Some cool lists that I found so far:
 
+[//]: # "BEGIN:URL_LIST_TO_PARSE"
 * [maahl](https://github.com/maahl/awesome-postgres-resources) - more articles;
 * [edib](https://github.com/edib/awesome-postgres) - many different stuff (misc);
 * [devton](https://github.com/devton/awesome-postgresql) - small list, mention some blogs;
@@ -16,7 +17,7 @@ Stop with it, and go code something! :P
 * [kevmo](https://github.com/kevmo/awesome-postgres) - one item with material about FTS
 * [w-e-ll](https://github.com/w-e-ll/awesome-postgresql) - more lists of good stuff;
 * [sumonsun](https://gitlab.com/sumonsun/awesome-postgres) - another one, from gitlab now :) 
-
+[//]: # "END:URL_LIST_TO_PARSE"
 
 ## TODO: What I am doing here is: :elephant:
 
