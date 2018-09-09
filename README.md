@@ -11,12 +11,13 @@ Stop with it, and go code something! :P
 
 [//]: # "BEGIN:URL_LIST_TO_PARSE"
 * [maahl](https://github.com/maahl/awesome-postgres-resources) - more articles;  <!-- RAW(https://raw.githubusercontent.com/maahl/awesome-postgres-resources/master/README.md)  -->
-* [edib](https://github.com/edib/awesome-postgres) - many different stuff (misc);
-* [devton](https://github.com/devton/awesome-postgresql) - small list, mention some blogs;
-* [dhamaniasad](https://github.com/dhamaniasad/awesome-postgres) - large one, with different material as well and language bindings; <This might be the winer so far>
-* [kevmo](https://github.com/kevmo/awesome-postgres) - one item with material about FTS
-* [w-e-ll](https://github.com/w-e-ll/awesome-postgresql) - more lists of good stuff;
-* [sumonsun](https://gitlab.com/sumonsun/awesome-postgres) - another one, from gitlab now :) 
+* [edib](https://github.com/edib/awesome-postgres) - many different stuff (misc); <!-- RAW(https://raw.githubusercontent.com/edib/awesome-postgres/master/README.md) -->
+* [devton](https://github.com/devton/awesome-postgresql) - small list, mention some blogs; <!-- RAW(https://raw.githubusercontent.com/devton/awesome-postgresql/master/README.md) -->
+* [dhamaniasad](https://github.com/dhamaniasad/awesome-postgres) - large one, with different material as well and language bindings; <This might be the winer so far> <!-- RAW(https://raw.githubusercontent.com/dhamaniasad/awesome-postgres/master/README.md  ) -->
+* [kevmo](https://github.com/kevmo/awesome-postgres) - one item with material about FTS <!-- RAW(https://raw.githubusercontent.com/kevmo/awesome-postgres/master/README.md) -->
+
+* [w-e-ll](https://github.com/w-e-ll/awesome-postgresql) - more lists of good stuff; <!-- RAW(https://raw.githubusercontent.com/w-e-ll/awesome-postgresql/master/README.md) -->
+* [sumonsun](https://gitlab.com/sumonsun/awesome-postgres) - another one, from gitlab now :) <!-- RAW(https://gitlab.com/sumonsun/awesome-postgres/raw/master/README.md) -->
 [//]: # "END:URL_LIST_TO_PARSE"
 
 ## TODO: What I am doing here is: :elephant:
