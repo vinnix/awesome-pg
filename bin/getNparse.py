@@ -10,6 +10,7 @@ import re
 lines_array = []
 lines_to_parse = []
 url_list_started = False
+parsing_list = []
 try:
     with open("../README.md","rt") as readme_file:
       for line in readme_file:
@@ -40,7 +41,18 @@ try:
 
 
     for urlnum,to_parse in enumerate(lines_to_parse):
-      print(to_parse,urlnum)
+      ### XXX: I will come back to this regex later
+      ### https://docs.python.org/3.6/library/re.html
+      url_to_parse = re.search("RAW\((?P<url>https?://[^\s]+)\)", to_parse)
+      #print(to_parse,urlnum)
+      #print(url_to_parse.group("url"))
+      #print("\n\n")
+      parsing_list.append(url_to_parse.group("url"))
+      ### I do still have more to learn regarding regex in python
+
+    for pos,url in enumerate(parsing_list):
+        print(url)
+
 
 except FileNotFoundError:
     print("vinnix's README file not found!")
