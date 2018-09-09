@@ -7,6 +7,14 @@
 import re
 import urllib.request
 
+
+def url_parse(address):
+    req = urllib.request.Request(address)
+    with urllib.request.urlopen(req) as response:
+        the_page = response.read()
+    return the_page
+
+
 lines_array = []
 lines_to_parse = []
 url_list_started = False
@@ -51,13 +59,8 @@ try:
 
     for pos, url in enumerate(parsing_list):
         print(url)
+        print(url_parse(url))
+
 
 except FileNotFoundError:
     print("vinnix's README.md file not found!")
-
-
-def url_parse(address):
-    req = urllib.request.Request(address)
-    with urllib.request.urlopen(req) as response:
-        the_page = response.read()
-    return the_page
