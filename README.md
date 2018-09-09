@@ -10,7 +10,7 @@ Stop with it, and go code something! :P
 ## Some cool lists that I found so far:
 
 [//]: # "BEGIN:URL_LIST_TO_PARSE"
-* [maahl](https://github.com/maahl/awesome-postgres-resources) - more articles;
+* [maahl](https://github.com/maahl/awesome-postgres-resources) - more articles;  [comment]: # "test"
 * [edib](https://github.com/edib/awesome-postgres) - many different stuff (misc);
 * [devton](https://github.com/devton/awesome-postgresql) - small list, mention some blogs;
 * [dhamaniasad](https://github.com/dhamaniasad/awesome-postgres) - large one, with different material as well and language bindings; <This might be the winer so far>
