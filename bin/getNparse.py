@@ -9,10 +9,12 @@ import urllib.request
 import markdown
 from urlextract import URLExtract
 from html.parser import HTMLParser
-from urllib.request import urlopen
-from urllib.error import URLError
+from urllib.error import URLError, HTTPError
+import traceback
+import logging
 
 
+# ################################################################
 class Parser(HTMLParser):
     def __init__(self):
         super().__init__()
@@ -31,18 +33,43 @@ class Parser(HTMLParser):
         if tag == 'title':
             self._in_title_tag = False
 
+# ################################################################
+
 
 def get_title(url):
+    print("Getting title from: ", url)
+    request_timeout = 10
+
+    req = urllib.request.Request(
+        url,
+        data=None,
+        headers={
+            'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) '
+                          'AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.47 Safari/537.36'
+        }
+    )
+
     try:
-        with urlopen(url) as stream:
+        with urllib.request.urlopen(req, timeout=request_timeout) as stream:
             data = stream.read()
-    except URLError:
+        parser = Parser()
+        parser.feed(data.decode('utf-8', errors='ignore'))
+        return parser.title
+
+    except HTTPError as e:
+        error_message = e.code
+        print("EXCEPTION: HTTPError: ", error_message, "URL: ", url)
         return
-
-    parser = Parser()
-    parser.feed(data.decode('utf-8', errors='ignore'))
-    return parser.title
-
+    except URLError as e:
+        error_message = e.reason
+        print("EXCEPTION: URLError: ", error_message, "URL: ", url)
+        return
+    except ValueError:
+        print("EXCEPTION: Invalid URL : ", url)
+        return
+    except Exception:
+        print("EXCEPTION: URL:", url)
+        logging.error(traceback.format_exc())
 
 
 def url_parse(address):
@@ -50,6 +77,9 @@ def url_parse(address):
     with urllib.request.urlopen(req) as response:
         the_page = response.read().decode('utf-8')
     return the_page
+
+
+# ################################################################
 
 
 lines_array = []
@@ -98,21 +128,21 @@ try:
     extractor = URLExtract()
 
     item_total = 0
-    for pos, url in enumerate(parsing_list):
-        print(">>>> ", url)
-        url_text = url_parse(url)
-        html = md.reset().convert(url_parse(url))
+    for pos, url_list in enumerate(parsing_list):
+        print(">>>> ", url_list)
+        url_text = url_parse(url_list)
+        html = md.reset().convert(url_parse(url_list))
         item_counter = 0
         for urli in extractor.gen_urls(html):
-            item_counter += 1
-            title = ""
-            try:
+            # blacklisted "URLs"
+            # XXX: Generate this list from a file
+            if urli != "Postgres.app" and urli != "CONTRIBUTING.md" \
+                    and urli != "pgconfig.org" and urli != 'PostgreSQL.org'\
+                    and urli != 'opm.io':
+                item_counter += 1
+                title = ""
                 title = get_title(urli)
-
-            except:
-                pass
-
-            print("Title:", title , "URL: ", urli)
+                print("Title:", title, "URL: ", urli)
         print("List URLs counter: ", item_counter)
         item_total += item_counter
         #
