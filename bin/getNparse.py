@@ -8,6 +8,41 @@ import re
 import urllib.request
 import markdown
 from urlextract import URLExtract
+from html.parser import HTMLParser
+from urllib.request import urlopen
+from urllib.error import URLError
+
+
+class Parser(HTMLParser):
+    def __init__(self):
+        super().__init__()
+        self.title = ''
+        self._in_title_tag = False
+
+    def handle_starttag(self, tag, attrs):
+        if tag == 'title':
+            self._in_title_tag = True
+
+    def handle_data(self, data):
+        if self._in_title_tag:
+            self.title += data
+
+    def handle_endtag(self, tag):
+        if tag == 'title':
+            self._in_title_tag = False
+
+
+def get_title(url):
+    try:
+        with urlopen(url) as stream:
+            data = stream.read()
+    except URLError:
+        return
+
+    parser = Parser()
+    parser.feed(data.decode('utf-8', errors='ignore'))
+    return parser.title
+
 
 
 def url_parse(address):
@@ -69,8 +104,15 @@ try:
         html = md.reset().convert(url_parse(url))
         item_counter = 0
         for urli in extractor.gen_urls(html):
-            print(urli)
             item_counter += 1
+            title = ""
+            try:
+                title = get_title(urli)
+
+            except:
+                pass
+
+            print("Title:", title , "URL: ", urli)
         print("List URLs counter: ", item_counter)
         item_total += item_counter
         #
