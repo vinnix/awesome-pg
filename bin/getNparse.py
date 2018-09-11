@@ -6,12 +6,14 @@
 
 import re
 import urllib.request
+import markdown
+from urlextract import URLExtract
 
 
 def url_parse(address):
     req = urllib.request.Request(address)
     with urllib.request.urlopen(req) as response:
-        the_page = response.read()
+        the_page = response.read().decode('utf-8')
     return the_page
 
 
@@ -57,10 +59,23 @@ try:
         parsing_list.append(url_to_parse.group("url"))
         # I do still have more to learn regarding regex in python
 
-    for pos, url in enumerate(parsing_list):
-        print(url)
-        print(url_parse(url))
+    md = markdown.Markdown()
+    extractor = URLExtract()
 
+    item_total = 0
+    for pos, url in enumerate(parsing_list):
+        print(">>>> ", url)
+        url_text = url_parse(url)
+        html = md.reset().convert(url_parse(url))
+        item_counter = 0
+        for urli in extractor.gen_urls(html):
+            print(urli)
+            item_counter += 1
+        print("List URLs counter: ", item_counter)
+        item_total += item_counter
+        #
+        # print(html)
+    print("Total URLs counter: ", item_total)
 
 except FileNotFoundError:
     print("vinnix's README.md file not found!")
