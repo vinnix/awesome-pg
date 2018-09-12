@@ -161,6 +161,8 @@ try:
         item_counter += 1
         title = " "
         title = get_title(urli)
+        if title == "":
+            title = urli
         tup = dict(url=urli, title=title)
         final_list.append(tup)
         print("Title:", title, "URL: ", urli)
