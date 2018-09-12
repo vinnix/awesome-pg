@@ -12,6 +12,9 @@ from html.parser import HTMLParser
 from urllib.error import URLError, HTTPError
 import traceback
 import logging
+from operator import itemgetter
+import itertools
+from pprint import pprint
 
 
 # ################################################################
@@ -56,20 +59,22 @@ def get_title(url):
         parser.feed(data.decode('utf-8', errors='ignore'))
         return parser.title
 
+    # XXX: Concat error code to returning message
     except HTTPError as e:
         error_message = e.code
         print("EXCEPTION: HTTPError: ", error_message, "URL: ", url)
-        return
+        return " "
     except URLError as e:
         error_message = e.reason
         print("EXCEPTION: URLError: ", error_message, "URL: ", url)
-        return
+        return " "
     except ValueError:
         print("EXCEPTION: Invalid URL : ", url)
-        return
+        return " "
     except Exception:
         print("EXCEPTION: URL:", url)
         logging.error(traceback.format_exc())
+        return " "
 
 
 def url_parse(address):
@@ -81,11 +86,12 @@ def url_parse(address):
 
 # ################################################################
 
-
+debug = False
 lines_array = []
 lines_to_parse = []
 url_list_started = False
 parsing_list = []
+final_list = []
 try:
     with open("../README.md", "rt") as readme_file:
         for line in readme_file:
@@ -127,27 +133,51 @@ try:
     md = markdown.Markdown()
     extractor = URLExtract()
 
+    comp_url_list = []
     item_total = 0
     for pos, url_list in enumerate(parsing_list):
         print(">>>> ", url_list)
         url_text = url_parse(url_list)
         html = md.reset().convert(url_parse(url_list))
-        item_counter = 0
-        for urli in extractor.gen_urls(html):
-            # blacklisted "URLs"
-            # XXX: Generate this list from a file
-            if urli != "Postgres.app" and urli != "CONTRIBUTING.md" \
-                    and urli != "pgconfig.org" and urli != 'PostgreSQL.org'\
-                    and urli != 'opm.io':
-                item_counter += 1
-                title = ""
-                title = get_title(urli)
-                print("Title:", title, "URL: ", urli)
-        print("List URLs counter: ", item_counter)
-        item_total += item_counter
-        #
-        # print(html)
+        # print(html)# print(html)
+        comp_url_list.extend(extractor.gen_urls(html))
+    comp_url_list.sort()
+    comp_url_list = [a[0] for a in itertools.groupby(comp_url_list)]
+    # XXX: Make URL list above unique
+    comp_url_list.remove('Postgres.app')
+    comp_url_list.remove('CONTRIBUTING.md')
+    comp_url_list.remove('pgconfig.org')
+    comp_url_list.remove('PostgreSQL.org')
+    comp_url_list.remove('opm.io')
+
+    item_counter = 0
+    for urli in comp_url_list:
+        # blacklisted "URLs"
+        # XXX: Generate this list from a file
+        # if urli != "Postgres.app" and urli != "CONTRIBUTING.md" \
+        #         and urli != "pgconfig.org" and urli != 'PostgreSQL.org'\
+        #         and urli != 'opm.io':
+        if True:
+            item_counter += 1
+            title = " "
+            title = get_title(urli)
+            tup = dict(url=urli, title=title)
+            final_list.append(tup)
+            print("Title:", title, "URL: ", urli)
+            print("List URLs counter: ", item_counter)
+            item_total += item_counter
+
     print("Total URLs counter: ", item_total)
+    print("#############################################################################")
+    print("#############################################################################")
+
+    # pprint(final_list)
+    final_list.sort(key=itemgetter("title"))
+    for ind, item in enumerate(final_list):
+        print("Item:", ind, "Tile:", item['title'], "URL:", item['url'])
+
+    if debug:
+        pprint(final_list)
 
 except FileNotFoundError:
     print("vinnix's README.md file not found!")
