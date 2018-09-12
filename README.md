@@ -1,13 +1,13 @@
 # awesome-pg 
 ![awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg) PostgreSQL "Awesome" Lists of Projects, Articles, etc.. 
 
-'Ohh no! He is creating another of those "Awesome" lists!'. 
+'Ohh no! He is creating another of those "awesome" lists!'. 
 Stop with it, and go code something! :P
 
 [<img src="https://wiki.postgresql.org/images/a/a4/PostgreSQL_logo.3colors.svg" align="right"  width="100">](https://www.postgresql.org/)
 
 
-## Some cool lists that I found so far:
+## Lists that I found so far:
 
 [//]: # "BEGIN:URL_LIST_TO_PARSE"
 * [maahl](https://github.com/maahl/awesome-postgres-resources) - more articles;  <!-- RAW(https://raw.githubusercontent.com/maahl/awesome-postgres-resources/master/README.md)  -->
@@ -22,12 +22,13 @@ Stop with it, and go code something! :P
 
 ## TODO: What I am doing here is: :elephant:
 
-* Compilling different resources in one list (dedup);
-* Separating then in files;
-* Another ideas that are in my head; 
+* [X] Compilling different resources in one list (dedup);
+* [ ] Separating then in files;
+* [ ] Generate a "tags" cloud per URL;
+* [ ] Get name from original lists;
 
 
-## Other Useful projects:
+## Other projects:
 
 * [pg_quota](https://github.com/hlinnaka/pg_quota) Objects diskspace
 * 
@@ -38,7 +39,8 @@ Stop with it, and go code something! :P
 * [official](https://pgxn.org/dist/plv8/doc/plv8.html) plv8 official page
 * [upgrade procedure](https://pgxn.org/dist/plv8/doc/plv8.html#Update.procedure) how to upgrade plv8
 * [using modules](https://rymc.io/2016/03/22/a-deep-dive-into-plv8/) plv8 / modules / shuffle 
-* 
+
+## Books:
 
 
 ## Search results:
