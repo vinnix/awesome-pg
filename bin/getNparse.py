@@ -58,25 +58,25 @@ def get_title(url):
         parser = Parser()
         parser.feed(data.decode('utf-8', errors='ignore'))
         title_str = parser.title
-        re.sub(r"[\s\t\n\']*", ' ', title_str)
+        re.sub(r"[\s\t\n\r\']*", ' ', title_str)
         return title_str.strip()
 
     # XXX: Concat error code to returning message
     except HTTPError as e:
         error_message = e.code
         print("EXCEPTION: HTTPError: ", error_message, "URL: ", url)
-        return " " + str(e.code)
+        return " " + str(e.code) + " " + url
     except URLError as e:
         error_message = e.reason
         print("EXCEPTION: URLError: ", error_message, "URL: ", url)
-        return " " + str(e.reason)
+        return " " + str(e.reason) + " " + url
     except ValueError:
         print("EXCEPTION: Invalid URL : ", url)
-        return " "
+        return " " + url
     except Exception:
         print("EXCEPTION: URL:", url)
         logging.error(traceback.format_exc())
-        return " "
+        return " " + url
 
 
 def url_parse(address):
@@ -174,7 +174,7 @@ try:
     # pprint(final_list)
     final_list.sort(key=itemgetter("title"))
     with open('../Compiled.md', 'w') as the_file:
-        the_file.write("== Compiled list")
+        the_file.write("== Compiled list\n")
         for ind, item in enumerate(final_list):
             print("Item:", ind, "Tile:", item['title'], "URL:", item['url'])
             the_file.write("* [" + item['title'] + "](" + item['url']  + ") \n")
