@@ -57,17 +57,19 @@ def get_title(url):
             data = stream.read()
         parser = Parser()
         parser.feed(data.decode('utf-8', errors='ignore'))
-        return parser.title
+        title_str = parser.title
+        re.sub(r"[\s\t\n\']*", ' ', title_str)
+        return title_str.strip()
 
     # XXX: Concat error code to returning message
     except HTTPError as e:
         error_message = e.code
         print("EXCEPTION: HTTPError: ", error_message, "URL: ", url)
-        return " "
+        return " " + str(e.code)
     except URLError as e:
         error_message = e.reason
         print("EXCEPTION: URLError: ", error_message, "URL: ", url)
-        return " "
+        return " " + str(e.reason)
     except ValueError:
         print("EXCEPTION: Invalid URL : ", url)
         return " "
@@ -144,6 +146,10 @@ try:
     comp_url_list.sort()
     comp_url_list = [a[0] for a in itertools.groupby(comp_url_list)]
     # XXX: Make URL list above unique
+
+    # blacklisted "URLs"
+    # XXX: Generate this list from a file
+
     comp_url_list.remove('Postgres.app')
     comp_url_list.remove('CONTRIBUTING.md')
     comp_url_list.remove('pgconfig.org')
@@ -152,20 +158,14 @@ try:
 
     item_counter = 0
     for urli in comp_url_list:
-        # blacklisted "URLs"
-        # XXX: Generate this list from a file
-        # if urli != "Postgres.app" and urli != "CONTRIBUTING.md" \
-        #         and urli != "pgconfig.org" and urli != 'PostgreSQL.org'\
-        #         and urli != 'opm.io':
-        if True:
-            item_counter += 1
-            title = " "
-            title = get_title(urli)
-            tup = dict(url=urli, title=title)
-            final_list.append(tup)
-            print("Title:", title, "URL: ", urli)
-            print("List URLs counter: ", item_counter)
-            item_total += item_counter
+        item_counter += 1
+        title = " "
+        title = get_title(urli)
+        tup = dict(url=urli, title=title)
+        final_list.append(tup)
+        print("Title:", title, "URL: ", urli)
+        print("List URLs counter: ", item_counter)
+        item_total += item_counter
 
     print("Total URLs counter: ", item_total)
     print("#############################################################################")
@@ -173,8 +173,12 @@ try:
 
     # pprint(final_list)
     final_list.sort(key=itemgetter("title"))
-    for ind, item in enumerate(final_list):
-        print("Item:", ind, "Tile:", item['title'], "URL:", item['url'])
+    with open('../Compiled.md', 'w') as the_file:
+        the_file.write("== Compiled list")
+        for ind, item in enumerate(final_list):
+            print("Item:", ind, "Tile:", item['title'], "URL:", item['url'])
+            the_file.write("* [" + item['title'] + "](" + item['url']  + ") \n")
+    the_file.close()
 
     if debug:
         pprint(final_list)
