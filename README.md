@@ -33,14 +33,28 @@ Stop with it, and go code something! :P
 * [pg_quota](https://github.com/hlinnaka/pg_quota) Objects diskspace
 * 
 
+## PostGIS:
 
-## plv8:
+* [The State of PostGIS](https://www.youtube.com/watch?v=TbE3LJIU2aM)
+* [Introduction to QGIS](https://www.youtube.com/watch?v=WAbOR_E2xtI)
+* [Getting Started with QGIS and PostGIS](https://www.youtube.com/watch?v=EUUWUUDjU4o)
+
+
+## Functions and Procedures
+
+* [Debugging your PL/pgSQL code](https://www.youtube.com/watch?v=pOb-7JZQoW4) Watch it before starting to write code into your database!
+
+
+### plv8:
 
 * [official](https://pgxn.org/dist/plv8/doc/plv8.html) plv8 official page
 * [upgrade procedure](https://pgxn.org/dist/plv8/doc/plv8.html#Update.procedure) how to upgrade plv8
 * [using modules](https://rymc.io/2016/03/22/a-deep-dive-into-plv8/) plv8 / modules / shuffle 
 
 ## Books:
+
+*[X] [PostGIS Cookbook](https://www.packtpub.com/big-data-and-business-intelligence/postgis-cookbook) 
+*[X] [Systems Performance: Enterprise and the Cloud](https://www.goodreads.com/book/show/18058001-systems-performance)
 
 
 ## Search results:
