@@ -31,7 +31,6 @@ Stop with it, and go code something! :P
 ## Other projects:
 
 * [pg_quota](https://github.com/hlinnaka/pg_quota) Objects diskspace
-* 
 
 ## PostGIS:
 
@@ -53,8 +52,8 @@ Stop with it, and go code something! :P
 
 ## Books:
 
-*[X] [PostGIS Cookbook](https://www.packtpub.com/big-data-and-business-intelligence/postgis-cookbook) 
-*[X] [Systems Performance: Enterprise and the Cloud](https://www.goodreads.com/book/show/18058001-systems-performance)
+* [X] - [PostGIS Cookbook](https://www.packtpub.com/big-data-and-business-intelligence/postgis-cookbook)  
+* [X] - [Systems Performance: Enterprise and the Cloud](https://www.goodreads.com/book/show/18058001-systems-performance)
 
 
 ## Search results:
