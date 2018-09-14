@@ -176,7 +176,8 @@ try:
     # pprint(final_list)
     final_list.sort(key=itemgetter("title"))
     with open('../Compiled.md', 'w') as the_file:
-        the_file.write("== Compiled list\n")
+        the_file.write("# Compiled list\n\n")
+        the_file.write('[<img src="https://wiki.postgresql.org/images/a/a4/PostgreSQL_logo.3colors.svg" align="right"  width="100">](https://www.postgresql.org/)\n')
         for ind, item in enumerate(final_list):
             print("Item:", ind, "Tile:", item['title'], "URL:", item['url'])
             the_file.write("* [" + item['title'] + "](" + item['url']  + ") \n")
