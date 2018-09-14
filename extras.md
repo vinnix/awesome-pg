@@ -11,3 +11,8 @@
 * [pagila](https://github.com/devrimgunduz/pagila)
 * [pllua-ng](https://github.com/RhodiumToad/pllua-ng)
 * [pg-toastutils](https://github.com/RhodiumToad/pg-toastutils)
+* [pg_credereum](https://github.com/postgrespro/pg_credereum)
+* [Credereum – blockchain-enabled Postgres](https://pgconf.ru/en/2018/110824) 
+* [The Bitcoin Blockchain PostgresSQL Schema](https://grisha.org/blog/2017/12/15/blockchain-and-postgres/)
+* [blkchain](https://github.com/blkchain/blkchain)
+* [pg_blkchain](https://github.com/blkchain/pg_blkchain)
