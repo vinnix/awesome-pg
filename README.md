@@ -9,7 +9,6 @@ Stop with it, and go code something! :P
 
 ## Lists that I found so far:
 
-* [vinnix](https://gist.github.com/vinnix/056f6f4169fcdc8d13732d0e6fdffe22) - My "cheat-sheet" (still to be organized), that motivated me to create this project.
 [//]: # "BEGIN:URL_LIST_TO_PARSE"
 * [maahl](https://github.com/maahl/awesome-postgres-resources) - more articles;  <!-- RAW(https://raw.githubusercontent.com/maahl/awesome-postgres-resources/master/README.md)  -->
 * [edib](https://github.com/edib/awesome-postgres) - many different stuff (misc); <!-- RAW(https://raw.githubusercontent.com/edib/awesome-postgres/master/README.md) -->
@@ -20,6 +19,7 @@ Stop with it, and go code something! :P
 * [sumonsun](https://gitlab.com/sumonsun/awesome-postgres) - another one, from gitlab now :) <!-- RAW(https://gitlab.com/sumonsun/awesome-postgres/raw/master/README.md) -->
 <!-- RAW(https://raw.githubusercontent.com/vinnix/awesome-pg/master/extras.md) -->
 [//]: # "END:URL_LIST_TO_PARSE"
+* [vinnix](https://gist.github.com/vinnix/056f6f4169fcdc8d13732d0e6fdffe22) - My "cheat-sheet" (still to be organized), that motivated me to create this project.
 
 ## TODO: What I am doing here is: :elephant:
 
