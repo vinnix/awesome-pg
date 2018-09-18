@@ -17,3 +17,4 @@
 * [blkchain](https://github.com/blkchain/blkchain)
 * [pg_blkchain](https://github.com/blkchain/pg_blkchain)
 * [memory dive deep](https://gist.github.com/gaolizhou/3494bc20bbdc9d2c1ce7f8b19c5f5e16)
+* [DBA scripts from pgexperts](https://github.com/pgexperts/pgx_scripts)
