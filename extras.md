@@ -18,3 +18,8 @@
 * [pg_blkchain](https://github.com/blkchain/pg_blkchain)
 * [memory dive deep](https://gist.github.com/gaolizhou/3494bc20bbdc9d2c1ce7f8b19c5f5e16)
 * [DBA scripts from pgexperts](https://github.com/pgexperts/pgx_scripts)
+* [pg_web_stats](https://github.com/kirs/pg_web_stats)
+* [pg_stat_staments blog post in Russian](http://evtuhovich.ru/blog/2013/06/28/pg-stat-statements/#comment-945382408)
+* [Advancewd pg_stat_statements presentation](https://www.youtube.com/watch?v=hrBchZ_W6GE)
+* [more on postgres performance](http://www.craigkerstiens.com/2013/01/10/more-on-postgres-performance/)
+
