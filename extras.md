@@ -24,3 +24,4 @@
 * [more on postgres performance](http://www.craigkerstiens.com/2013/01/10/more-on-postgres-performance/)
 * [Lock dependency_info](https://wiki.postgresql.org/wiki/Lock_dependency_information) 
 * [Visibility map problem](https://wiki.postgresql.org/wiki/Visibility_Map_Problems)
+* [What hot_standby_feedback really does](https://www.cybertec-postgresql.com/en/what-hot_standby_feedback-in-postgresql-really-does/)
