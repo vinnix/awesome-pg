@@ -145,11 +145,16 @@ try:
         comp_url_list.extend(extractor.gen_urls(html))
     comp_url_list.sort()
     comp_url_list = [a[0] for a in itertools.groupby(comp_url_list)]
-    # XXX: Make URL list above unique
+    # XXX: Make URL list above unique 
+    # Converting using  comp_url_list = set(comp_url_list)
 
     # blacklisted "URLs"
     # XXX: Generate this list from a file
 
+    # remove will raise error if item is not there, so I should use
+    # discard, instead
+    #  comp_url_list.discard('foooo')
+    
     comp_url_list.remove('Postgres.app')
     comp_url_list.remove('CONTRIBUTING.md')
     comp_url_list.remove('pgconfig.org')
