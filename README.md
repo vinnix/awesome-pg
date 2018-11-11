@@ -67,6 +67,8 @@ Stop with it, and go code something! :P
 
 ## Archeology: Some gists from the past:
 
+* [PG DAY / infoQ / indexes on PostgreSQL (ptBR)](https://www.infoq.com/br/presentations/indices-no-postgresql-o-que-voce-precisa-saber)
+
 * [2013-10-30 :: Makefile](https://gist.github.com/vinnix/8d71b278e5795282f6dd) Makefile
 * [2013-10-30 :: myLilLibrary.c](https://gist.github.com/vinnix/7235246) PostgreSQL C function
 * [2013-10-30 :: CREATE FUNCTION](https://gist.github.com/vinnix/6f54a694786642e96c07) Making C function available inside the database
