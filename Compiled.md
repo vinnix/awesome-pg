@@ -24,7 +24,7 @@
 * [Another PostgreSQL Diff Tool (apgdiff) - Official Homepage](https://www.apgdiff.com) 
 * [Autovacuum, explained for engineers, new improved version PGConf.eu 2015 Vienna](http://blog.postgresql-consulting.com/2015/10/autovacuum-explained-for-engineers-new.html) 
 * [Awesome MySQL](http://shlomi-noach.github.io/awesome-mysql/) 
-* [Azure Database for PostgreSQL | Microsoft AzurePostgreSQL için Azure Veritabanı ile Dijital PazarlamaPostgreSQL için Azure Veritabanı ile perakende ve e-ticaretPostgreSQL için Azure Veritabanı ile finans yönetimi uygulamalarıPostgreSQL için Azure Veritabanı ile ölçeklenebilir web uygulamaları ve mobil uygulamalarPostgreSQL için Azure Veritabanı kullanan akıllı uygulamalar](https://azure.microsoft.com/en-us/services/postgresql/) 
+* [Azure Database for PostgreSQL | Microsoft AzureDigitales Marketing mit Azure Database for PostgreSQLEinzelhandel und E-Commerce mit Azure Database for PostgreSQLFinanzmanagement-Apps mit Azure Database for PostgreSQLSkalierbare Webanwendungen und mobile Anwendungen mit Azure Database for PostgreSQLIntelligente Apps mit Azure Database for PostgreSQL](https://azure.microsoft.com/en-us/services/postgresql/) 
 * [Backend flowchart - PostgreSQL wiki](https://wiki.postgresql.org/wiki/Backend_flowchart#parser) 
 * [Backup and recover a Postgres DB using wal-e (Example)](https://coderwall.com/p/cwe2_a/backup-and-recover-a-postgres-db-using-wal-e) 
 * [Barman](http://www.pgbarman.org) 
