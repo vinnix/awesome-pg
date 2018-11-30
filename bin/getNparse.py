@@ -63,9 +63,12 @@ def get_title(url):
 
     # XXX: Concat error code to returning message
     except HTTPError as e:
-        error_message = e.code
-        print("EXCEPTION: HTTPError: ", error_message, "URL: ", url)
-        return " " + str(e.code) + " " + url
+        if e.code == 404 or e.code == 403:
+            return 0
+        else:
+            error_message = e.code
+            print("EXCEPTION: HTTPError: ", error_message, "URL: ", url)
+            return " " + str(e.code) + " " + url
     except URLError as e:
         error_message = e.reason
         print("EXCEPTION: URLError: ", error_message, "URL: ", url)
@@ -153,7 +156,7 @@ try:
 
     # remove will raise error if item is not there, so I should use
     # discard, instead
-    #  comp_url_list.discard('foooo')
+    #  comp_url_list.discard('foo')
     
     comp_url_list.remove('Postgres.app')
     comp_url_list.remove('CONTRIBUTING.md')
@@ -164,8 +167,9 @@ try:
     item_counter = 0
     for urli in comp_url_list:
         item_counter += 1
-        title = " "
         title = get_title(urli)
+        if title == 0:
+            continue
         if title == "":
             title = urli
         tup = dict(url=urli, title=title)
@@ -182,10 +186,10 @@ try:
     final_list.sort(key=itemgetter("title"))
     with open('../Compiled.md', 'w') as the_file:
         the_file.write("# Compiled list\n\n")
-        the_file.write('[<img src="https://wiki.postgresql.org/images/a/a4/PostgreSQL_logo.3colors.svg" align="right"  width="100">](https://www.postgresql.org/)\n')
+        the_file.write('[<img src="https://wiki.postgresql.org/images/a/a4/PostgreSQL_logo.3colors.svg" align="right" width="100">](https://www.postgresql.org/)\n')
         for ind, item in enumerate(final_list):
             print("Item:", ind, "Tile:", item['title'], "URL:", item['url'])
-            the_file.write("* [" + item['title'] + "](" + item['url']  + ") \n")
+            the_file.write("* [" + item['title'] + "](" + item['url'] + ") \n")
     the_file.close()
 
     if debug:
