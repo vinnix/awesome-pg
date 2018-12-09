@@ -63,23 +63,26 @@ def get_title(url):
 
     # XXX: Concat error code to returning message
     except HTTPError as e:
-        if e.code == 404 or e.code == 403:
+        if e.code == 404 or e.code == 403 or e.code == 500:
             return 0
         else:
             error_message = e.code
             print("EXCEPTION: HTTPError: ", error_message, "URL: ", url)
             return " " + str(e.code) + " " + url
     except URLError as e:
-        error_message = e.reason
-        print("EXCEPTION: URLError: ", error_message, "URL: ", url)
-        return " " + str(e.reason) + " " + url
+        if e.reason == "unknown url type":
+            return 0
+        else:
+            error_message = e.reason
+            print("EXCEPTION: URLError: ", error_message, "URL: ", url)
+            return " URLError " + str(e.reason) + " " + url
     except ValueError:
         print("EXCEPTION: Invalid URL : ", url)
-        return " " + url
+        return " ValueError " + url
     except Exception:
         print("EXCEPTION: URL:", url)
         logging.error(traceback.format_exc())
-        return " " + url
+        return " GeneralException " + url
 
 
 def url_parse(address):
