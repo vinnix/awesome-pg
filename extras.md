@@ -27,3 +27,4 @@
 * [What hot_standby_feedback really does](https://www.cybertec-postgresql.com/en/what-hot_standby_feedback-in-postgresql-really-does/)
 * [PostgreSQL Exercises](https://pgexercises.com/questions/basic/selectall.html)
 * [PL/pgsql Lint - function and procedures verification](https://github.com/okbob/plpgsql_check)
+* [PG Catalog diagrams](https://www.postgrescompare.com/2017/06/11/pg_catalog_constraints.html)
