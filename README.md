@@ -56,6 +56,7 @@ Stop with it, and go code something! :P
 
 * [X] - [PostGIS Cookbook](https://www.packtpub.com/big-data-and-business-intelligence/postgis-cookbook)  
 * [X] - [Systems Performance: Enterprise and the Cloud](https://www.goodreads.com/book/show/18058001-systems-performance)
+* [X] - [PostgreSQL High Performance](https://www.amazon.com/PostgreSQL-High-Performance-Gregory-Smith/dp/184951030X)
 
 
 ## Search results:
