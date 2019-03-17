@@ -39,6 +39,7 @@ Stop with it, and go code something! :P
 * [The State of PostGIS](https://www.youtube.com/watch?v=TbE3LJIU2aM)
 * [Introduction to QGIS](https://www.youtube.com/watch?v=WAbOR_E2xtI)
 * [Getting Started with QGIS and PostGIS](https://www.youtube.com/watch?v=EUUWUUDjU4o)
+* [How do I built QGIS from source on CentOS 7](https://gist.github.com/vinnix/5590342ba725244f744ca0f7b3b367d4)
 
 
 ## Functions and Procedures
@@ -70,11 +71,14 @@ Stop with it, and go code something! :P
 
 * [PG DAY / infoQ / indexes on PostgreSQL (ptBR)](https://www.infoq.com/br/presentations/indices-no-postgresql-o-que-voce-precisa-saber)
 
+* [2018-03-05 :: Install SSL in JBoss](https://gist.github.com/vinnix/7f8830fd5567c94d9b1d3771bae0ab8e)
 * [2013-10-30 :: Makefile](https://gist.github.com/vinnix/8d71b278e5795282f6dd) Makefile
 * [2013-10-30 :: myLilLibrary.c](https://gist.github.com/vinnix/7235246) PostgreSQL C function
 * [2013-10-30 :: CREATE FUNCTION](https://gist.github.com/vinnix/6f54a694786642e96c07) Making C function available inside the database
 
 * [2013-09-17 :: Testing PostgresXC](https://gist.github.com/vinnix/ff737e494e199db5a2f8)
+* [2012-05-11 :: JDBC / PostgreSQL Lab](https://github.com/vinnix/JavaLab)
+* [2011-06-09 :: Contacting pg-hackers "wrongly"](https://grokbase.com/t/postgresql/pgsql-hackers/1169f91gqs/core-extensions-relocation/oldest)
 * [2010-11-12 :: PL/pgSQL skeleton](https://gist.github.com/vinnix/257f544bf1380ef546ed)
 * [2010-11-08 :: Monitoring Slony-I](https://gist.github.com/vinnix/5809e69b173f8e071920)
 * [2010-10-26 :: Monitoring Slony-I](https://gist.github.com/vinnix/1beca118d09320871816)
