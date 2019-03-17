@@ -1,8 +1,6 @@
 # awesome-pg 
 ![awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg) PostgreSQL "Awesome" Lists of Projects, Articles, etc.. 
 
-'Ohh no! He is creating another of those "awesome" lists!'. 
-Stop with it, and go code something! :P
 
 [<img src="https://wiki.postgresql.org/images/a/a4/PostgreSQL_logo.3colors.svg" align="right"  width="100">](https://www.postgresql.org/)
 
@@ -85,3 +83,6 @@ Stop with it, and go code something! :P
 * [2010-10-24 :: Vacuuming Slony-I log tables](https://gist.github.com/vinnix/87b698d89ee2d1c81b54)
 
 
+- Fun note to self:
+'Ohh no! He is creating another of those "awesome" lists!'. 
+Stop with it, and go code something! :P
