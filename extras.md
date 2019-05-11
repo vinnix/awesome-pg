@@ -31,4 +31,5 @@
 * [PG Development / Database Research Group - Carnegie Mellon University](https://github.com/cmu-db/peloton/wiki/Postgres)
 * [Zope and PostgreSQL](https://www.linuxjournal.com/article/5849)
 * [Python and PostgreSQL](https://wiki.python.org/moin/PostgreSQL)
+* [pgbouncer](https://hackernoon.com/understanding-postgres-connection-pooling-with-pgbouncer-unlisted-draft-bdb7ebf073ab)
 
