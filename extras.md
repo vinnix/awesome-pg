@@ -32,4 +32,5 @@
 * [Zope and PostgreSQL](https://www.linuxjournal.com/article/5849)
 * [Python and PostgreSQL](https://wiki.python.org/moin/PostgreSQL)
 * [pgbouncer](https://hackernoon.com/understanding-postgres-connection-pooling-with-pgbouncer-unlisted-draft-bdb7ebf073ab)
+* [pg-bitfrost](https://github.com/Nextdoor/pg-bifrost/) 
 
