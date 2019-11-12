@@ -76,12 +76,15 @@
 
 * [2013-09-17 :: Testing PostgresXC](https://gist.github.com/vinnix/ff737e494e199db5a2f8)
 * [2012-05-11 :: JDBC / PostgreSQL Lab](https://github.com/vinnix/JavaLab)
-* [2011-06-09 :: Contacting pg-hackers "wrongly"](https://grokbase.com/t/postgresql/pgsql-hackers/1169f91gqs/core-extensions-relocation/oldest)
+* [2010-11-12 :: XFS + RAID1+0](https://gist.github.com/vinnix/caaa818393597caf6300) 
 * [2010-11-12 :: PL/pgSQL skeleton](https://gist.github.com/vinnix/257f544bf1380ef546ed)
 * [2010-11-08 :: Monitoring Slony-I](https://gist.github.com/vinnix/5809e69b173f8e071920)
 * [2010-10-26 :: Monitoring Slony-I](https://gist.github.com/vinnix/1beca118d09320871816)
 * [2010-10-24 :: Vacuuming Slony-I log tables](https://gist.github.com/vinnix/87b698d89ee2d1c81b54)
 
+## My bad!
+
+* [2011-06-09 :: Contacting pg-hackers "wrongly"](https://grokbase.com/t/postgresql/pgsql-hackers/1169f91gqs/core-extensions-relocation/oldest)
 
 - Fun note to self:
 'Ohh no! He is creating another of those "awesome" lists!'. 
