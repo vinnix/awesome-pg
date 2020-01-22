@@ -1,4 +1,6 @@
 # awesome-pg 
+![awesome](http://vinnix.github.io/vinnix/all/images/awesome.svg) PostgreSQL "awesome" list of project, articles, docs, and related material
+
 ![awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg) PostgreSQL "Awesome" Lists of Projects, Articles, etc.. 
 
 
