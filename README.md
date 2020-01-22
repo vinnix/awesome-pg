@@ -39,6 +39,11 @@
 * [Introduction to QGIS](https://www.youtube.com/watch?v=WAbOR_E2xtI)
 * [Getting Started with QGIS and PostGIS](https://www.youtube.com/watch?v=EUUWUUDjU4o)
 * [How do I built QGIS from source on CentOS 7](https://gist.github.com/vinnix/5590342ba725244f744ca0f7b3b367d4)
+* [Open Street Maps](http://download.geofabrik.de/)
+* [Natural Earth](https://www.naturalearthdata.com/downloads/)
+** [10m Cultural Vectors](https://www.naturalearthdata.com/downloads/10m-cultural-vectors/)
+** [10m Physical Vectors](https://www.naturalearthdata.com/downloads/10m-physical-vectors/)
+** [10m Raster Data](https://www.naturalearthdata.com/downloads/10m-raster-data/)
 
 
 ## Functions and Procedures
