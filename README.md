@@ -23,7 +23,7 @@
 
 * [X] Compilling different resources in one list. dedup.;
 * [ ] Adding scripts that might be useful (in progress);
-* [ ] Separating then in files;
+* [ ] Separating them in files;
 * [ ] Generate a "tags" cloud per URL;
 * [ ] Get name from original lists;
 
@@ -43,6 +43,7 @@
   * [10m Cultural Vectors](https://www.naturalearthdata.com/downloads/10m-cultural-vectors/)
   * [10m Physical Vectors](https://www.naturalearthdata.com/downloads/10m-physical-vectors/)
   * [10m Raster Data](https://www.naturalearthdata.com/downloads/10m-raster-data/)
+* [MIT Intro PostGIS](http://duspviz.mit.edu/tutorials/intro-postgis/)  
 
 
 ## Functions and Procedures
