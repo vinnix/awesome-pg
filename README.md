@@ -1,10 +1,7 @@
 # awesome-pg 
 ![awesome](http://vinnix.github.io/vinnix/all/images/awesome.svg) PostgreSQL "awesome" list of project, articles, docs, and related material
 
-![awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg) PostgreSQL "Awesome" Lists of Projects, Articles, etc.. 
-
-
-[<img src="https://wiki.postgresql.org/images/a/a4/PostgreSQL_logo.3colors.svg" align="right"  width="100">](https://www.postgresql.org/)
+[<img src="http://vinnix.github.io/vinnix/all/images/PostgreSQL_logo.3colors.svg" align="right"  width="100">](https://www.postgresql.org/)
 
 
 ## Lists that I found so far:
