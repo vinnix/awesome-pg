@@ -12,7 +12,6 @@
 * [devton](https://github.com/devton/awesome-postgresql) - small list, mention some blogs; <!-- RAW(https://raw.githubusercontent.com/devton/awesome-postgresql/master/README.md) -->
 * [dhamaniasad](https://github.com/dhamaniasad/awesome-postgres) - large one, with different material as well and language bindings; <This might be the winer so far> <!-- RAW(https://raw.githubusercontent.com/dhamaniasad/awesome-postgres/master/README.md) -->
 * [kevmo](https://github.com/kevmo/awesome-postgres) - one item with material about FTS <!-- RAW(https://raw.githubusercontent.com/kevmo/awesome-postgres/master/README.md) -->
-* [w-e-ll](https://github.com/w-e-ll/awesome-postgresql) - more lists of good stuff; <!-- RAW(https://raw.githubusercontent.com/w-e-ll/awesome-postgresql/master/README.md) -->
 * [sumonsun](https://gitlab.com/sumonsun/awesome-postgres) - another one, from gitlab now :) <!-- RAW(https://gitlab.com/sumonsun/awesome-postgres/raw/master/README.md) -->
 <!-- RAW(https://raw.githubusercontent.com/vinnix/awesome-pg/master/extras.md) -->
 [//]: # "END:URL_LIST_TO_PARSE"
