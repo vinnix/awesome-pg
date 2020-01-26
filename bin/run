@@ -1,0 +1,4 @@
+#!/bin/env bash
+
+python getNparse.py
+cat ../Awesome.md ../Compiled.md > README.md
