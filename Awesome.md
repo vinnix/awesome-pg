@@ -91,12 +91,4 @@
 
 * [2011-06-09 :: Contacting pg-hackers "wrongly"](https://grokbase.com/t/postgresql/pgsql-hackers/1169f91gqs/core-extensions-relocation/oldest)
 
-- Fun note to self:
-'Ohh no! He is creating another of those "awesome" lists!'. 
-Stop with it, and go code something! :P
-
-## Compiled list (generated "automagically" from above lists)
-
-[include](File:Compiled.md)
-
 

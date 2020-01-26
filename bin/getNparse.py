@@ -1,7 +1,17 @@
 #!/bin/env python
 
-#
+# #######################################################################################################
 # Parsing URLs to gather PostgreSQL info from "awesome" lists
+# #######################################################################################################
+# 
+# Author: Vinícius Schmidt
+# Copyright: Vinícius Abrahão Bazana Schmidt (2018)
+# License: PostgreSQL like license
+# https://www.postgresql.org/about/licence/
+
+# TODO:
+#
+#
 #
 
 import re
@@ -17,7 +27,9 @@ import itertools
 from pprint import pprint
 
 
-# ################################################################
+# #######################################################################################################
+# Parser implementation (inhirent HTMLParser) for title tag
+# #######################################################################################################
 class Parser(HTMLParser):
     def __init__(self):
         super().__init__()
@@ -36,13 +48,11 @@ class Parser(HTMLParser):
         if tag == 'title':
             self._in_title_tag = False
 
-# ################################################################
-
-
+# #######################################################################################################
+# Used to obtain title
+# #######################################################################################################
 def get_title(url):
-    print("Getting title from: ", url)
     request_timeout = 10
-
     req = urllib.request.Request(
         url,
         data=None,
@@ -63,14 +73,20 @@ def get_title(url):
 
     # XXX: Concat error code to returning message
     except HTTPError as e:
-        if e.code == 404 or e.code == 403 or e.code == 500:
+        if e.code == 404 or e.code == 403 or e.code == 500 or e.code == 503 or e.code == 501:
             return 0
         else:
             error_message = e.code
             print("EXCEPTION: HTTPError: ", error_message, "URL: ", url)
-            return " " + str(e.code) + " " + url
+            return " HTTPError " + str(e.code) + " " + url
     except URLError as e:
-        if e.reason == "unknown url type":
+        if 'unknown url type' in str(e.reason):
+            return 0
+        elif 'Name or service not known' in str(e.reason):
+            return 0
+        elif 'Connection refused' in str(e.reason):
+            return 0
+        elif 'certificate verify failed: certificate has expired' in str(e.reason):
             return 0
         else:
             error_message = e.reason
@@ -85,6 +101,9 @@ def get_title(url):
         return " GeneralException " + url
 
 
+# #######################################################################################################
+# URL simple parser
+# #######################################################################################################
 def url_parse(address):
     req = urllib.request.Request(address)
     with urllib.request.urlopen(req) as response:
@@ -92,7 +111,11 @@ def url_parse(address):
     return the_page
 
 
-# ################################################################
+# #######################################################################################################
+# Main
+# #######################################################################################################
+
+
 
 debug = False
 lines_array = []
@@ -101,7 +124,7 @@ url_list_started = False
 parsing_list = []
 final_list = []
 try:
-    with open("../README.md", "rt") as readme_file:
+    with open("../Awesome.md", "rt") as readme_file:
         for line in readme_file:
             lines_array.append(line.rstrip('\n'))
 
@@ -151,7 +174,7 @@ try:
         comp_url_list.extend(extractor.gen_urls(html))
     comp_url_list.sort()
     comp_url_list = [a[0] for a in itertools.groupby(comp_url_list)]
-    # XXX: Make URL list above unique 
+    # XXX: Make URL list above unique
     # Converting using  comp_url_list = set(comp_url_list)
 
     # blacklisted "URLs"
@@ -160,7 +183,6 @@ try:
     # remove will raise error if item is not there, so I should use
     # discard, instead
     #  comp_url_list.discard('foo')
-    
     comp_url_list.remove('Postgres.app')
     comp_url_list.remove('CONTRIBUTING.md')
     comp_url_list.remove('pgconfig.org')
@@ -170,15 +192,15 @@ try:
     item_counter = 0
     for urli in comp_url_list:
         item_counter += 1
-        title = get_title(urli)
+        title = get_title(urli)  ## Connect to the site and get the URL
         if title == 0:
             continue
         if title == "":
             title = urli
         tup = dict(url=urli, title=title)
         final_list.append(tup)
-        print("Title:", title, "URL: ", urli)
-        print("List URLs counter: ", item_counter)
+        print(f'{item_counter:5} URL:   {urli:30}')
+        print(f'{item_counter:5} Title: {title:50}')
         item_total += item_counter
 
     print("Total URLs counter: ", item_total)
@@ -188,15 +210,15 @@ try:
     # pprint(final_list)
     final_list.sort(key=itemgetter("title"))
     with open('../Compiled.md', 'w') as the_file:
-        the_file.write("# Compiled list\n\n")
-        the_file.write('[<img src="https://wiki.postgresql.org/images/a/a4/PostgreSQL_logo.3colors.svg" align="right" width="100">](https://www.postgresql.org/)\n')
+        the_file.write("## Compiled list\n\n")
+        the_file.write('[<img src="http://vinnix.github.io/vinnix/all/images/PostgreSQL_logo.3colors.svg" align="right" width="100">](https://www.postgresql.org/)\n')
         for ind, item in enumerate(final_list):
             print("Item:", ind, "Tile:", item['title'], "URL:", item['url'])
-            the_file.write("* [" + item['title'] + "](" + item['url'] + ") \n")
+            the_file.write("<!-- url(" + str(ind) + ") --> * [" + item['title'] + "](" + item['url'] + ") \n")
     the_file.close()
 
     if debug:
         pprint(final_list)
 
 except FileNotFoundError:
-    print("vinnix's README.md file not found!")
+    print("vinnix's Awesome.md file not found!")
