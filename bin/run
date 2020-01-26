@@ -1,4 +1,6 @@
 #!/bin/env bash
 
+# Execute the list compiler and concatenate
+
 python getNparse.py
 cat ../Awesome.md ../Compiled.md > ../README.md

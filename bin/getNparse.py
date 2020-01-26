@@ -3,15 +3,16 @@
 # #######################################################################################################
 # Parsing URLs to gather PostgreSQL info from "awesome" lists
 # #######################################################################################################
-# 
-# Author: Vinícius Schmidt
+#
 # Copyright: Vinícius Abrahão Bazana Schmidt (2018)
-# License: PostgreSQL like license
-# https://www.postgresql.org/about/licence/
+# License: PostgreSQL license
+# https://github.com/vinnix/awesome-pg/blob/master/legal/LICENSE
 
 # TODO:
-#
-#
+#       a) modules and classes
+#       b) better logic and error handling, passing references
+#       c) multi-thread
+#       d) unique names
 #
 
 import re
@@ -116,7 +117,6 @@ def url_parse(address):
 # #######################################################################################################
 
 
-
 debug = False
 lines_array = []
 lines_to_parse = []
@@ -214,7 +214,8 @@ try:
         the_file.write('[<img src="http://vinnix.github.io/vinnix/all/images/PostgreSQL_logo.3colors.svg" align="right" width="100">](https://www.postgresql.org/)\n')
         for ind, item in enumerate(final_list):
             print("Item:", ind, "Tile:", item['title'], "URL:", item['url'])
-            the_file.write("<!-- url(" + str(ind) + ") --> * [" + item['title'] + "](" + item['url'] + ") \n")
+            the_file.write("<!-- url(" + str(ind) + "  url("+ item['url'] + ") --> \n")
+            the_file.write(" * [" + item['title'] + "](" + item['url'] + ") \n")
     the_file.close()
 
     if debug:
