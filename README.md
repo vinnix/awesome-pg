@@ -94,3 +94,9 @@
 - Fun note to self:
 'Ohh no! He is creating another of those "awesome" lists!'. 
 Stop with it, and go code something! :P
+
+## Compiled list (generated "automagically" from above lists)
+
+[include](File:Compiled.md)
+
+
