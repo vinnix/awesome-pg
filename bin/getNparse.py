@@ -70,7 +70,7 @@ def get_title(url):
         parser.feed(data.decode('utf-8', errors='ignore'))
         title_str = parser.title
         re.sub(r"[\s\t\n\r\']*", ' ', title_str)
-        return title_str.strip()
+        return title_str.strip().replace(r'\n', "") 
 
     # XXX: Concat error code to returning message
     except HTTPError as e:
