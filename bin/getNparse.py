@@ -13,7 +13,7 @@
 #       b) better logic and error handling, passing references
 #       c) multi-thread
 #       d) unique names
-#
+#       e) get pdf titles
 
 import re
 import urllib.request
@@ -207,15 +207,22 @@ try:
     print("#############################################################################")
     print("#############################################################################")
 
-    # pprint(final_list)
+    pprint(final_list)
     final_list.sort(key=itemgetter("title"))
+    pprint(final_list)
+
+    agg_data = []
+    for item_title, dataitem in itertools.groupby(final_list, itemgetter('title') ):
+        agg_data.append(list(dataitem))
+
     with open('../Compiled.md', 'w') as the_file:
         the_file.write("## Compiled list\n\n")
         the_file.write('[<img src="http://vinnix.github.io/vinnix/all/images/PostgreSQL_logo.3colors.svg" align="right" width="100">](https://www.postgresql.org/)\n')
-        for ind, item in enumerate(final_list):
-            print("Item:", ind, "Tile:", item['title'], "URL:", item['url'])
-            the_file.write("<!-- url(" + str(ind) + "  url("+ item['url'] + ") --> \n")
-            the_file.write(" * [" + item['title'] + "](" + item['url'] + ") \n")
+
+        for ind, item in enumerate(agg_data):
+            print("Item:", ind, "Tile:", item[0]['title'], "URL:", item[0]['url'])
+            the_file.write("<!-- pos(" + str(ind) + ")  url("+ item[0]['url'] + ") --> \n")
+            the_file.write(" * [" + item[0]['title'] + "](" + item[0]['url'] + ") \n")
     the_file.close()
 
     if debug:
