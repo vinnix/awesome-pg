@@ -35,3 +35,4 @@
 * [pg-bitfrost](https://github.com/Nextdoor/pg-bifrost/) 
 * [pg_hibernator](https://github.com/gurjeet/pg_hibernator)
 * [PostgreSQL + ZFS](https://people.freebsd.org/~seanc/postgresql/scale15x-2017-postgresql_zfs_best_practices.pdf)
+* [OSM Data](http://download.geofabrik.de/index.html) 
