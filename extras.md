@@ -35,4 +35,5 @@
 * [pg-bitfrost](https://github.com/Nextdoor/pg-bifrost/) 
 * [pg_hibernator](https://github.com/gurjeet/pg_hibernator)
 * [PostgreSQL + ZFS](https://people.freebsd.org/~seanc/postgresql/scale15x-2017-postgresql_zfs_best_practices.pdf)
-* [OSM Data](http://download.geofabrik.de/index.html) 
+* [OSM Data](http://download.geofabrik.de/index.html)
+* [Distinction between reads from fsystem cache and disk](https://rjuju.github.io/postgresql/2015/03/04/pg_stat_kcache-2-0.html) 
