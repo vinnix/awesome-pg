@@ -49,6 +49,9 @@
 
 * [Debugging your PL/pgSQL code](https://www.youtube.com/watch?v=pOb-7JZQoW4) Watch it before starting to write code into your database!
 
+### Bloat moninotring:
+
+* [ioguix / Bloat estimation](https://github.com/ioguix/pgsql-bloat-estimation)
 
 ### plv8:
 
