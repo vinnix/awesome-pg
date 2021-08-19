@@ -18,6 +18,11 @@
 * [vinnix](https://gist.github.com/vinnix/056f6f4169fcdc8d13732d0e6fdffe22) - My "cheat-sheet" (still to be organized), that motivated me to create this project.
 * [my youtube PG's playlist](https://www.youtube.com/playlist?list=PLa7LbGW827W1-qbyUV3zLvhO-6FqESo0Z) - Best PG videos on youtube
 
+## Blog Posts:
+ 
+* [Speed up time series data ingestion by partitioning tables on Amazon RDS for PostgreSQL](https://aws.amazon.com/blogs/database/speed-up-time-series-data-ingestion-by-partitioning-tables-on-amazon-rds-for-postgresql/)
+ 
+ 
 ## TODO: What I am doing here is: :elephant:
 
 * [X] Compilling different resources in one list. dedup.;
