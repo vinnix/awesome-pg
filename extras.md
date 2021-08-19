@@ -38,3 +38,5 @@
 * [OSM Data](http://download.geofabrik.de/index.html)
 * [Distinction between reads from fsystem cache and disk](https://rjuju.github.io/postgresql/2015/03/04/pg_stat_kcache-2-0.html)
 * [Managing Constraint Exclusion in Table Partitioning](https://medium.com/@keithf4/a-large-database-does-not-mean-large-shared-buffers-209a9872ecbc)
+* [Snapshot Isolation in PostgreSQL](http://mbukowicz.github.io/databases/2020/05/01/snapshot-isolation-in-postgresql.html)
+* [PP - MVCC in PostgreSQL - Snapshots](https://habr.com/en/company/postgrespro/blog/479512/)
