@@ -26,6 +26,8 @@
  * [Understanding autovacuum in Amazon RDS for PostgreSQL environments](https://aws.amazon.com/blogs/database/understanding-autovacuum-in-amazon-rds-for-postgresql-environments/)
  * [Managing inactive Amazon Aurora PostgreSQL users](https://aws.amazon.com/blogs/database/managing-inactive-amazon-aurora-postgresql-users/)
  * [Evolving pg_cron together: Postgres 13, audit log, background workers, & job names](https://www.citusdata.com/blog/2020/10/31/evolving-pg-cron-together/)
+ * [Best practices for Amazon RDS for PostgreSQL major upgrades and replicas](https://aws.amazon.com/blogs/database/best-practices-for-amazon-rds-for-postgresql-major-upgrades-and-replicas/)
+ * [Remove bloat from Amazon Aurora and RDS for PostgreSQL with pg_repack](https://aws.amazon.com/blogs/database/remove-bloat-from-amazon-aurora-and-rds-for-postgresql-with-pg_repack/)
  
  
 ## TODO: What I am doing here is: :elephant:
