@@ -23,7 +23,9 @@
 * [Designing high-performance time series data tables on Amazon RDS for PostgreSQL](https://aws.amazon.com/blogs/database/designing-high-performance-time-series-data-tables-on-amazon-rds-for-postgresql/)
 * [Speed up time series data ingestion by partitioning tables on Amazon RDS for PostgreSQL](https://aws.amazon.com/blogs/database/speed-up-time-series-data-ingestion-by-partitioning-tables-on-amazon-rds-for-postgresql/)
 * [Implement an Early Warning System for Transaction ID Wraparound in Amazon RDS for PostgreSQL](https://aws.amazon.com/blogs/database/implement-an-early-warning-system-for-transaction-id-wraparound-in-amazon-rds-for-postgresql/) 
- * [Understanding autovacuum in Amazon RDS for PostgreSQL environments](https://aws.amazon.com/blogs/database/understanding-autovacuum-in-amazon-rds-for-postgresql-environments/)  
+ * [Understanding autovacuum in Amazon RDS for PostgreSQL environments](https://aws.amazon.com/blogs/database/understanding-autovacuum-in-amazon-rds-for-postgresql-environments/)
+ * [Managing inactive Amazon Aurora PostgreSQL users](https://aws.amazon.com/blogs/database/managing-inactive-amazon-aurora-postgresql-users/)
+ * [Evolving pg_cron together: Postgres 13, audit log, background workers, & job names](https://www.citusdata.com/blog/2020/10/31/evolving-pg-cron-together/)
  
  
 ## TODO: What I am doing here is: :elephant:
