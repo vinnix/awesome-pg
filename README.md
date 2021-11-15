@@ -19,8 +19,11 @@
 * [my youtube PG's playlist](https://www.youtube.com/playlist?list=PLa7LbGW827W1-qbyUV3zLvhO-6FqESo0Z) - Best PG videos on youtube
 
 ## Blog Posts:
- 
+
+* [Designing high-performance time series data tables on Amazon RDS for PostgreSQL](https://aws.amazon.com/blogs/database/designing-high-performance-time-series-data-tables-on-amazon-rds-for-postgresql/ 
 * [Speed up time series data ingestion by partitioning tables on Amazon RDS for PostgreSQL](https://aws.amazon.com/blogs/database/speed-up-time-series-data-ingestion-by-partitioning-tables-on-amazon-rds-for-postgresql/)
+* [Implement an Early Warning System for Transaction ID Wraparound in Amazon RDS for PostgreSQL](https://aws.amazon.com/blogs/database/implement-an-early-warning-system-for-transaction-id-wraparound-in-amazon-rds-for-postgresql/) 
+ * [Understanding autovacuum in Amazon RDS for PostgreSQL environments](https://aws.amazon.com/blogs/database/understanding-autovacuum-in-amazon-rds-for-postgresql-environments/)  
  
  
 ## TODO: What I am doing here is: :elephant:
