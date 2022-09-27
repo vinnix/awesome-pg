@@ -41,4 +41,5 @@
 * [Snapshot Isolation in PostgreSQL](http://mbukowicz.github.io/databases/2020/05/01/snapshot-isolation-in-postgresql.html)
 * [PP - MVCC in PostgreSQL - Snapshots](https://habr.com/en/company/postgrespro/blog/479512/)
 * [Deferrable Constraints](https://begriffs.com/posts/2017-08-27-deferrable-sql-constraints.html)
-* [Deferrable Constraints 2](https://stackoverflow.com/questions/16323236/deferrable-check-constraint-in-postgresql?spm=a2c65.11461447.0.0.76d07a05AWw5tg) 
+* [Deferrable Constraints 2](https://stackoverflow.com/questions/16323236/deferrable-check-constraint-in-postgresql?spm=a2c65.11461447.0.0.76d07a05AWw5tg)
+* [Base36 Extension implementation](https://github.com/dimitri/base36/blob/master/base36.c)
