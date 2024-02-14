@@ -1,6 +1,5 @@
 # awesome-pg 
 ![awesome](http://vinnix.github.io/vinnix/all/images/awesome.svg) PostgreSQL "awesome" list of project, articles, docs, and related material
-
 [<img src="http://vinnix.github.io/vinnix/all/images/PostgreSQL_logo.3colors.svg" align="right"  width="100">](https://www.postgresql.org/)
 
 
@@ -105,10 +104,6 @@
 * [2010-11-08 :: Monitoring Slony-I](https://gist.github.com/vinnix/5809e69b173f8e071920)
 * [2010-10-26 :: Monitoring Slony-I](https://gist.github.com/vinnix/1beca118d09320871816)
 * [2010-10-24 :: Vacuuming Slony-I log tables](https://gist.github.com/vinnix/87b698d89ee2d1c81b54)
-
-## My bad!
-
-* [2011-06-09 :: Contacting pg-hackers "wrongly"](https://grokbase.com/t/postgresql/pgsql-hackers/1169f91gqs/core-extensions-relocation/oldest)
 
 
 ## Compiled list
