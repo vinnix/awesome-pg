@@ -55,8 +55,6 @@
  * [CyanAudit: DML logging tool for PostgreSQL / PostgreSQL Extension Network](http://pgxn.org/dist/cyanaudit/) 
 <!-- pos(26)  url(http://search.cpan.org/~rudy/DBD-Pg/Pg.pm) --> 
  * [DBD::Pg - PostgreSQL database driver for the DBI module - metacpan.orgRiver stage three 
-• 77 direct dependents 
-• 141 total dependents](http://search.cpan.org/~rudy/DBD-Pg/Pg.pm) 
 <!-- pos(27)  url(http://dbeaver.jkiss.org) --> 
  * [DBeaver Community | Free Universal Database Tool](http://dbeaver.jkiss.org) 
 <!-- pos(28)  url(http://blog.postgresql-consulting.com/) --> 
