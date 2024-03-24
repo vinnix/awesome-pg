@@ -54,16 +54,17 @@ class Parser(HTMLParser):
 # #######################################################################################################
 def get_title(url):
     request_timeout = 10
-    req = urllib.request.Request(
-        url,
-        data=None,
-        headers={
-            'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) '
-                          'AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.47 Safari/537.36'
-        }
-    )
-
     try:
+        req = urllib.request.Request(
+            url,
+            data=None,
+            headers={
+                'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) '
+                          'AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.47 Safari/537.36'
+            }
+        )
+
+
         with urllib.request.urlopen(req, timeout=request_timeout) as stream:
             data = stream.read()
         parser = Parser()
@@ -151,10 +152,13 @@ try:
         # expressions check. Ideally this script should be able
         # to parse large files in a non-expensive way.
 
+
+    # get_url_re = "RAW\((?P<url>https?://[^\s]+)\)"
+    get_url_re   = r"RAW\((?P<url>https?://[^\s]+)\)"
     for urlnum, to_parse in enumerate(lines_to_parse):
         # XXX: I will come back to this regex later
         # https://docs.python.org/3.6/library/re.html
-        url_to_parse = re.search("RAW\((?P<url>https?://[^\s]+)\)", to_parse)
+        url_to_parse = re.search(get_url_re, to_parse)
         # print(to_parse, urlnum)
         # print(url_to_parse.group("url"))
         # print("\n\n")
@@ -215,7 +219,7 @@ try:
     for item_title, dataitem in itertools.groupby(final_list, itemgetter('title') ):
         agg_data.append(list(dataitem))
 
-    with open('../Compiled.md', 'w') as the_file:
+    with open('../Compiled.md', 'w', encoding="utf-8") as the_file:
         the_file.write("## Compiled list\n\n")
         the_file.write('[<img src="http://vinnix.github.io/vinnix/all/images/PostgreSQL_logo.3colors.svg" align="right" width="100">](https://www.postgresql.org/)\n')
 
