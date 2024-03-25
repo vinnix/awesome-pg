@@ -1,56 +1,56 @@
 ## Compiled list
 
 [<img src="http://vinnix.github.io/vinnix/all/images/PostgreSQL_logo.3colors.svg" align="right" width="100">](https://www.postgresql.org/)
-<!-- pos(0)  url(https://people.freebsd.org/~seanc/postgresql/scale15x-2017-postgresql_zfs_best_practices.pdf) --> 
+<!-- pos(0)  url(https://madusudanan.com/blog/all-you-need-to-know-about-sorting-in-postgres/) --> 
+ * [ GeneralException https://madusudanan.com/blog/all-you-need-to-know-about-sorting-in-postgres/](https://madusudanan.com/blog/all-you-need-to-know-about-sorting-in-postgres/) 
+<!-- pos(1)  url(https://people.freebsd.org/~seanc/postgresql/scale15x-2017-postgresql_zfs_best_practices.pdf) --> 
  * [ GeneralException https://people.freebsd.org/~seanc/postgresql/scale15x-2017-postgresql_zfs_best_practices.pdf](https://people.freebsd.org/~seanc/postgresql/scale15x-2017-postgresql_zfs_best_practices.pdf) 
-<!-- pos(1)  url(https://www.java.com/) --> 
+<!-- pos(2)  url(https://www.java.com/) --> 
  * [ GeneralException https://www.java.com/](https://www.java.com/) 
-<!-- pos(2)  url(http://jinchengli.me/post/postgres-query-opt/) --> 
+<!-- pos(3)  url(http://jinchengli.me/post/postgres-query-opt/) --> 
  * [ URLError [Errno 11001] getaddrinfo failed http://jinchengli.me/post/postgres-query-opt/](http://jinchengli.me/post/postgres-query-opt/) 
-<!-- pos(3)  url(http://pginsight.io/) --> 
+<!-- pos(4)  url(http://pginsight.io/) --> 
  * [ URLError [Errno 11001] getaddrinfo failed http://pginsight.io/](http://pginsight.io/) 
-<!-- pos(4)  url(http://postgresql-backup.com/postgresql-blog/wp-content/uploads/2016/06/PostgreSQL-Cheat-Sheet_-String-Functions.pdf) --> 
+<!-- pos(5)  url(http://postgresql-backup.com/postgresql-blog/wp-content/uploads/2016/06/PostgreSQL-Cheat-Sheet_-String-Functions.pdf) --> 
  * [ URLError [Errno 11001] getaddrinfo failed http://postgresql-backup.com/postgresql-blog/wp-content/uploads/2016/06/PostgreSQL-Cheat-Sheet_-String-Functions.pdf](http://postgresql-backup.com/postgresql-blog/wp-content/uploads/2016/06/PostgreSQL-Cheat-Sheet_-String-Functions.pdf) 
-<!-- pos(5)  url(http://www.sqltabs.com/) --> 
+<!-- pos(6)  url(http://www.sqltabs.com/) --> 
  * [ URLError [Errno 11001] getaddrinfo failed http://www.sqltabs.com/](http://www.sqltabs.com/) 
-<!-- pos(6)  url(https://www.bigsql.org/) --> 
+<!-- pos(7)  url(https://www.bigsql.org/) --> 
  * [ URLError [Errno 11001] getaddrinfo failed https://www.bigsql.org/](https://www.bigsql.org/) 
-<!-- pos(7)  url(https://www.bigsql.org/postgresql/installers.jsp) --> 
+<!-- pos(8)  url(https://www.bigsql.org/postgresql/installers.jsp) --> 
  * [ URLError [Errno 11001] getaddrinfo failed https://www.bigsql.org/postgresql/installers.jsp](https://www.bigsql.org/postgresql/installers.jsp) 
-<!-- pos(8)  url(https://www.compose.com/articles/common-misconceptions-about-locking-in-postgresql/) --> 
+<!-- pos(9)  url(https://www.compose.com/articles/common-misconceptions-about-locking-in-postgresql/) --> 
  * [ URLError [Errno 11001] getaddrinfo failed https://www.compose.com/articles/common-misconceptions-about-locking-in-postgresql/](https://www.compose.com/articles/common-misconceptions-about-locking-in-postgresql/) 
-<!-- pos(9)  url(https://www.compose.com/articles/its-a-view-its-a-table-no-its-a-materialized-view/) --> 
+<!-- pos(10)  url(https://www.compose.com/articles/its-a-view-its-a-table-no-its-a-materialized-view/) --> 
  * [ URLError [Errno 11001] getaddrinfo failed https://www.compose.com/articles/its-a-view-its-a-table-no-its-a-materialized-view/](https://www.compose.com/articles/its-a-view-its-a-table-no-its-a-materialized-view/) 
-<!-- pos(10)  url(https://www.compose.com/articles/what-postgresql-has-over-other-open-source-sql-databases-part-ii/) --> 
+<!-- pos(11)  url(https://www.compose.com/articles/what-postgresql-has-over-other-open-source-sql-databases-part-ii/) --> 
  * [ URLError [Errno 11001] getaddrinfo failed https://www.compose.com/articles/what-postgresql-has-over-other-open-source-sql-databases-part-ii/](https://www.compose.com/articles/what-postgresql-has-over-other-open-source-sql-databases-part-ii/) 
-<!-- pos(11)  url(https://www.compose.com/articles/what-postgresql-has-over-other-open-source-sql-databases/) --> 
+<!-- pos(12)  url(https://www.compose.com/articles/what-postgresql-has-over-other-open-source-sql-databases/) --> 
  * [ URLError [Errno 11001] getaddrinfo failed https://www.compose.com/articles/what-postgresql-has-over-other-open-source-sql-databases/](https://www.compose.com/articles/what-postgresql-has-over-other-open-source-sql-databases/) 
-<!-- pos(12)  url(https://www.datarow.com/) --> 
+<!-- pos(13)  url(https://www.datarow.com/) --> 
  * [ URLError [Errno 11001] getaddrinfo failed https://www.datarow.com/](https://www.datarow.com/) 
-<!-- pos(13)  url(http://blog.postgresql-consulting.com/) --> 
+<!-- pos(14)  url(http://blog.postgresql-consulting.com/) --> 
  * [ URLError [Errno 11002] getaddrinfo failed http://blog.postgresql-consulting.com/](http://blog.postgresql-consulting.com/) 
-<!-- pos(14)  url(http://blog.postgresql-consulting.com/2015/10/autovacuum-explained-for-engineers-new.html) --> 
+<!-- pos(15)  url(http://blog.postgresql-consulting.com/2015/10/autovacuum-explained-for-engineers-new.html) --> 
  * [ URLError [Errno 11002] getaddrinfo failed http://blog.postgresql-consulting.com/2015/10/autovacuum-explained-for-engineers-new.html](http://blog.postgresql-consulting.com/2015/10/autovacuum-explained-for-engineers-new.html) 
-<!-- pos(15)  url(http://postgrest.com/) --> 
+<!-- pos(16)  url(http://postgrest.com/) --> 
  * [ URLError [SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1000) http://postgrest.com/](http://postgrest.com/) 
-<!-- pos(16)  url(ScaffoldHub.io) --> 
+<!-- pos(17)  url(ScaffoldHub.io) --> 
  * [ ValueError ScaffoldHub.io](ScaffoldHub.io) 
-<!-- pos(17)  url(okmeter.io) --> 
+<!-- pos(18)  url(okmeter.io) --> 
  * [ ValueError okmeter.io](okmeter.io) 
-<!-- pos(18)  url(http://www.interdb.jp/pg/pgsql08.html) --> 
+<!-- pos(19)  url(http://www.interdb.jp/pg/pgsql08.html) --> 
  * [8. Buffer Manager :: Hironobu SUZUKI @ InterDB](http://www.interdb.jp/pg/pgsql08.html) 
-<!-- pos(19)  url(https://rymc.io/2016/03/22/a-deep-dive-into-plv8/) --> 
+<!-- pos(20)  url(https://rymc.io/2016/03/22/a-deep-dive-into-plv8/) --> 
  * [A Deep Dive into PL/v8 | Ryan McGrath](https://rymc.io/2016/03/22/a-deep-dive-into-plv8/) 
-<!-- pos(20)  url(https://medium.com/@keithf4/a-large-database-does-not-mean-large-shared-buffers-209a9872ecbc) --> 
+<!-- pos(21)  url(https://medium.com/@keithf4/a-large-database-does-not-mean-large-shared-buffers-209a9872ecbc) --> 
  * [A Large Database Does Not Mean Large shared_buffers | by Keith Fiske | Medium](https://medium.com/@keithf4/a-large-database-does-not-mean-large-shared-buffers-209a9872ecbc) 
-<!-- pos(21)  url(http://patshaughnessy.net/2015/11/24/a-look-at-how-postgres-executes-a-tiny-join) --> 
+<!-- pos(22)  url(http://patshaughnessy.net/2015/11/24/a-look-at-how-postgres-executes-a-tiny-join) --> 
  * [A Look at How Postgres Executes a Tiny Join - Pat Shaughnessy](http://patshaughnessy.net/2015/11/24/a-look-at-how-postgres-executes-a-tiny-join) 
-<!-- pos(22)  url(https://en.wikipedia.org/wiki/ACID) --> 
+<!-- pos(23)  url(https://en.wikipedia.org/wiki/ACID) --> 
  * [ACID - Wikipedia](https://en.wikipedia.org/wiki/ACID) 
-<!-- pos(23)  url(https://www.adminer.org/) --> 
+<!-- pos(24)  url(https://www.adminer.org/) --> 
  * [Adminer - Database management in a single PHP file](https://www.adminer.org/) 
-<!-- pos(24)  url(https://madusudanan.com/blog/all-you-need-to-know-about-sorting-in-postgres/) --> 
- * [All you need to know about sorting in Postgres | Madusudanan](https://madusudanan.com/blog/all-you-need-to-know-about-sorting-in-postgres/) 
 <!-- pos(25)  url(http://adpgtech.blogspot.com/search/label/PostgreSQL/) --> 
  * [Andrew Dunstan's PostgreSQL and Technical blog: PostgreSQL](http://adpgtech.blogspot.com/search/label/PostgreSQL/) 
 <!-- pos(26)  url(http://www.apgdiff.com/) --> 
