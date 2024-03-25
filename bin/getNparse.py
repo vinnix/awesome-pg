@@ -26,6 +26,8 @@ import logging
 from operator import itemgetter
 import itertools
 from pprint import pprint
+import asyncio
+import aiohttp
 
 
 # #######################################################################################################
@@ -52,6 +54,7 @@ class Parser(HTMLParser):
 # #######################################################################################################
 # Used to obtain title
 # #######################################################################################################
+#async def get_title(url):
 def get_title(url):
     request_timeout = 10
     try:
@@ -64,7 +67,7 @@ def get_title(url):
             }
         )
 
-
+#        async with urllib.request.urlopen(req, timeout=request_timeout) as stream:
         with urllib.request.urlopen(req, timeout=request_timeout) as stream:
             data = stream.read()
         parser = Parser()
@@ -114,48 +117,55 @@ def url_parse(address):
 
 
 # #######################################################################################################
-# Main
+# Read Template
 # #######################################################################################################
+def read_template(lines_array = []):
+    lines_array = []
+    url_list_started = False
+    lines_to_parse = []
+
+    try:
+        with open("../Awesome.md", "rt") as readme_file:
+            for line in readme_file:
+                lines_array.append(line.rstrip('\n'))
+
+        url_start_exp = re.compile(r"BEGIN.*URL_LIST_TO_PARSE", re.IGNORECASE)
+        url_end_exp = re.compile(r"END.*URL_LIST_TO_PARSE", re.IGNORECASE)
+
+        for linenum, element in enumerate(lines_array):
+            # Only check if the list mark/comment that points to the end of the URL list
+            # if we are already in appending mode. Otherwise there is no point to very it.
+            if url_list_started and url_end_exp.search(element):
+                url_list_started = False
+
+            if url_list_started:
+                lines_to_parse.append(element)
+
+            # The first boolean verification of the expression below is to avoid unnecessary
+            # RE search.
+            if url_list_started or url_start_exp.search(element):
+                url_list_started = True
+
+            # XXX Another possibility is: once knowing the "linenum" of the BEGIN and the END
+            # just do for loop and append the array, but it seems to be extra work.
+            # Need to confirm if this makes sense. That's why I tried to avoid unnecessary regular
+            # expressions check. Ideally this script should be able
+            # to parse large files in a non-expensive way.
+
+    except FileNotFoundError:
+        print("vinnix's Awesome.md file not found!")
+
+    return lines_to_parse
 
 
-debug = False
-lines_array = []
-lines_to_parse = []
-url_list_started = False
-parsing_list = []
-final_list = []
-try:
-    with open("../Awesome.md", "rt") as readme_file:
-        for line in readme_file:
-            lines_array.append(line.rstrip('\n'))
+# #######################################################################################################
+# Extract Title
+# #######################################################################################################
+def extract_title(lines_to_parse_ff):
 
-    url_start_exp = re.compile(r"BEGIN.*URL_LIST_TO_PARSE", re.IGNORECASE)
-    url_end_exp = re.compile(r"END.*URL_LIST_TO_PARSE", re.IGNORECASE)
-
-    for linenum, element in enumerate(lines_array):
-        # Only check if the list mark/comment that points to the end of the URL list
-        # if we are already in appending mode. Otherwise there is no point to very it.
-        if url_list_started and url_end_exp.search(element):
-            url_list_started = False
-
-        if url_list_started:
-            lines_to_parse.append(element)
-
-        # The first boolean verification of the expression below is to avoid unnecessary
-        # RE search.
-        if url_list_started or url_start_exp.search(element):
-            url_list_started = True
-
-        # XXX Another possibility is: once knowing the "linenum" of the BEGIN and the END
-        # just do for loop and append the array, but it seems to be extra work.
-        # Need to confirm if this makes sense. That's why I tried to avoid unnecessary regular
-        # expressions check. Ideally this script should be able
-        # to parse large files in a non-expensive way.
-
-
-    # get_url_re = "RAW\((?P<url>https?://[^\s]+)\)"
+    parsing_list = []
     get_url_re   = r"RAW\((?P<url>https?://[^\s]+)\)"
-    for urlnum, to_parse in enumerate(lines_to_parse):
+    for urlnum, to_parse in enumerate(lines_to_parse_ff):
         # XXX: I will come back to this regex later
         # https://docs.python.org/3.6/library/re.html
         url_to_parse = re.search(get_url_re, to_parse)
@@ -167,23 +177,23 @@ try:
 
     md = markdown.Markdown()
     extractor = URLExtract()
-
     comp_url_list = []
     item_total = 0
+
     for pos, url_list in enumerate(parsing_list):
         print(">>>> ", url_list)
         url_text = url_parse(url_list)
         html = md.reset().convert(url_parse(url_list))
         # print(html)# print(html)
         comp_url_list.extend(extractor.gen_urls(html))
+
+    # XXX: Make URL list below as unique
+    # Converting using  comp_url_list = set(comp_url_list)
     comp_url_list.sort()
     comp_url_list = [a[0] for a in itertools.groupby(comp_url_list)]
-    # XXX: Make URL list above unique
-    # Converting using  comp_url_list = set(comp_url_list)
 
-    # blacklisted "URLs"
+    # denied-listed "URLs"
     # XXX: Generate this list from a file
-
     # remove will raise error if item is not there, so I should use
     # discard, instead
     #  comp_url_list.discard('foo')
@@ -194,6 +204,7 @@ try:
     comp_url_list.remove('opm.io')
 
     item_counter = 0
+    final_list = []
     for urli in comp_url_list:
         item_counter += 1
         title = get_title(urli)  ## Connect to the site and get the URL
@@ -201,6 +212,7 @@ try:
             continue
         if title == "":
             title = urli
+
         tup = dict(url=urli, title=title)
         final_list.append(tup)
         print(f'{item_counter:5} URL:   {urli:30}')
@@ -219,6 +231,13 @@ try:
     for item_title, dataitem in itertools.groupby(final_list, itemgetter('title') ):
         agg_data.append(list(dataitem))
 
+    return agg_data
+
+
+# #######################################################################################################
+# Write to file
+# #######################################################################################################
+def write_to_file(agg_data):
     with open('../Compiled.md', 'w', encoding="utf-8") as the_file:
         the_file.write("## Compiled list\n\n")
         the_file.write('[<img src="http://vinnix.github.io/vinnix/all/images/PostgreSQL_logo.3colors.svg" align="right" width="100">](https://www.postgresql.org/)\n')
@@ -227,10 +246,28 @@ try:
             print("Item:", ind, "Tile:", item[0]['title'], "URL:", item[0]['url'])
             the_file.write("<!-- pos(" + str(ind) + ")  url("+ item[0]['url'] + ") --> \n")
             the_file.write(" * [" + item[0]['title'] + "](" + item[0]['url'] + ") \n")
-    the_file.close()
+        the_file.close()
 
-    if debug:
-        pprint(final_list)
 
-except FileNotFoundError:
-    print("vinnix's Awesome.md file not found!")
+# #######################################################################################################
+# Main
+# #######################################################################################################
+
+def main():
+
+    lines_to_parse_ff = []
+    lines_to_parse_ff = read_template()
+
+    agg_data_ff = []
+    agg_data_ff = extract_title(lines_to_parse_ff)
+
+    write_to_file(agg_data_ff)
+
+
+
+# #######################################################################################################
+#  MAIN Caller
+# #######################################################################################################
+
+if __name__ == "__main__":
+    main()
